@@ -1,0 +1,148 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    background: url("./background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: blue;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+}
+
+.title h1 {
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin-bottom: .45em;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.391);
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.textField {
+    border: none;
+    outline: none;
+    padding: .5em;
+    font-size: 1.225rem;
+    border-radius: 16px;
+    font-weight: 100;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.391);
+}
+
+.btn {
+    padding: .5em;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    background-color: white;
+    margin-left: .5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.391);
+    transition: .5s;
+}
+
+.btn i {
+    font-size: 1.2rem;
+    margin-right: .25em;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.output-container {
+    padding: .5em 0 0 0;
+}
+
+.cityName {
+    font-size: 3rem;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.391);
+    font-weight: 400;
+}
+
+.temp {
+    font-size: 2rem;
+    font-weight: 400;
+    /* text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.391); */
+    margin: .5em 0;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.wrap span {
+    font-size: 1.35rem;
+    font-weight: 100;
+    /* text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.391); */
+}
+
+@media (max-width:600px) {
+    .title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:470px) {
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    .textField {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+    .btn i {
+        font-size: 1rem;
+    }
+    .cityName {
+        font-size: 2.25rem;
+    }
+    .temp {
+        font-size: 2rem;
+    }
+}

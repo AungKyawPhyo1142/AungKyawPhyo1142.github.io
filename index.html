@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="box">
+                <div class="title">
+                    <h1>Weather Forecast</h1>
+                </div>
+                <div class="body">
+                    <div class="search-container">
+                        <input type="text" name="search" id="searchInput" class="textField" placeholder="Search...">
+                        <button type="button" class="btn" id="searchBtn"><i class='bx bx-search-alt-2'></i>Search</button>
+                    </div>
+                    <div class="output-container">
+                        <h1 class="cityName" id="city">TBH</h1>
+                        <h2 class="temp" id="temp">0&deg;C</h2>
+                        <div class="wrap">
+                            <span id="humid">Humidity: 0</span>
+                            <span id="wind">Wind Speed: 0</span>
+                            <span id="pressure">Pressure: 0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./app.js"></script>
+
+</html>
