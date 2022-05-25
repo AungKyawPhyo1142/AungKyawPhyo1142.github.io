@@ -16,7 +16,7 @@ searchBtn.addEventListener('click', () => {
 
     city = searchInput.value;
 
-    if (city != "" && city != null && city && undefined) {
+    if (city != "" && city != null && city != undefined) {
         searchInput.value = "";
         searchWeather(city);
 
