@@ -16,14 +16,15 @@ searchBtn.addEventListener('click', () => {
 
     city = searchInput.value;
 
-    if (city == "" || city == null || city == undefined) {
-        searchInput.value = "";
-        cityInput.innerHTML = "Invalid Input"
-    } else {
+    if (city != "" && city != null && city && undefined) {
         searchInput.value = "";
         searchWeather(city);
-    }
 
+    } else {
+        searchInput.value = "";
+        cityInput.innerHTML = "Invalid Input"
+
+    }
 })
 
 function searchWeather(city) {
