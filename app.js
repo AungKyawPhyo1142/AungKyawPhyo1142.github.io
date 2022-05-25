@@ -15,17 +15,10 @@ var response = {};
 searchBtn.addEventListener('click', () => {
 
     city = searchInput.value;
+    searchInput.value = "";
+    searchWeather(city);
 
-    if (city != "" && city != null && city != undefined) {
-        searchInput.value = "";
-        searchWeather(city);
-
-    } else {
-        searchInput.value = "";
-        cityInput.innerHTML = "Invalid Input"
-
-    }
-})
+});
 
 function searchWeather(city) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
@@ -35,10 +28,15 @@ function searchWeather(city) {
 
 function doChanges(res) {
     response = res;
+    
     let cityName, humid, wind, pressure, temp;
 
     cityName = response.name;
-    cityInput.innerHTML = cityName;
+    if (cityName === undefined) {
+        cityInput.innerHTML = "Invalid Input";
+    } else {
+        cityInput.innerHTML = cityName;
+    }
 
     temp = response.main.temp;
     tempInput.innerHTML = temp + "&deg;C";
